@@ -3,7 +3,7 @@
 # @File: thread_stu.py
 # @Email: fovegage@gmail.com
 # @Date: 2018-09-21 15:46:09
-# @Last Modified time: 2018-09-21 16:21:04
+# @Last Modified time: 2018-09-21 16:39:39
 
 
 # 线程是在进程中开启的
@@ -41,6 +41,7 @@ if __name__ == '__main__':
 	t1.start()
 	t2.start()
 
+	# 延时是操作系统堵塞运行，具体取决于操作系统调度
 	sleep(6)
 	print('主进程执行结束')
 
@@ -54,7 +55,7 @@ class MyThread(threading.Thread):
 			print(self.name + "@{}".format(x) )
 
 if __name__ == '__main__':
-	for x in range(1,3):
+	for x in range(1,3):ai
 		t = MyThread()
 		t.start()
 
