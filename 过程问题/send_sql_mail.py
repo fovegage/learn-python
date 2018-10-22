@@ -26,9 +26,10 @@ def query(sql):
 
 # 导出到excel
 def Export():
-    sql = query('select GROUP_CONCAT(COLUMN_NAME) from information_schema.COLUMNS where table_name = "good" and table_schema ="hahaha";')[0]
-
-    headers = str(sql[0]).split(',')
+    # sql = query('select GROUP_CONCAT(COLUMN_NAME) from information_schema.COLUMNS where table_name = "good" and table_schema ="hahaha";')[0]
+    #
+    # headers = str(sql[0]).split(',')
+    headers = [1, 2, 3, 4, 5, 6, 7]
     data = query('select * from good')
 
     genexcel = tablib.Dataset(*data, headers=headers)
@@ -39,7 +40,7 @@ def Export():
 def SendMail():
 
     _user = '602556194@qq.com'
-    _pwd = "**************"
+    _pwd = "buknjarxuuevbbdd"
     _to = "sdgaozhe@163.com"
 
     msg = MIMEMultipart()
