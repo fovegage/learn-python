@@ -10,7 +10,7 @@ import socket
 # 创建套接字
 udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 本地地址
+# 服务器地址
 localIp = ('192.168.16.1', 10000)
 
 # 发送数据
@@ -21,8 +21,6 @@ udpSocket.sendto(sendData.encode(), localIp)
 
 # 接受服务器消息
 recvData = udpSocket.recvfrom(1024)
-
-# 输出
 print(recvData)
 
 # 关闭套接字

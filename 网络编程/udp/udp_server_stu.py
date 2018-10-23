@@ -10,13 +10,16 @@ import socket
 # 创建
 udpsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-# 绑定ip
+# 绑定ip  只接受6008的客户端ip
 bindip = ('', 6008)
 udpsocket.bind(bindip)
 
+
 # 接收数据
-recvdata = udpsocket.recvfrom(1024)
-print(recvdata)
+while True:
+    recvdata = udpsocket.recvfrom(1024)
+    print(recvdata)
+
 
 # 关闭
 udpsocket.close()
