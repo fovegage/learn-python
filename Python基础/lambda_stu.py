@@ -5,5 +5,10 @@
 # @File    : lambda_stu.py
 # @Software: PyCharm
 
-fun = lambda x, y: x*y
-print(fun(2, 3))
+fun1 = lambda x, y: x*y
+print(fun1(2, 3))
+
+def fun2(x, y):
+    return x*y
+
+print(fun2(2, 3))
