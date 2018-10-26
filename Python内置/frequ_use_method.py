@@ -15,13 +15,6 @@ print(dir(dict))
 # 内存地址
 print(id(3))
 
-# format
-print("我爱你{}.".format('中国'))
-list = ['我', '爱', '你']
-print("{0[0]}{0[1]}{0[2]}中国".format(list))
-dict = {'name': 'china'}
-print("{name}".format(**dict))
-
 # len 返回字符长度  传入str, iter
 print(len('我爱你'))
 
@@ -134,3 +127,8 @@ print(isinstance(a, int))
 # divmod
 # return tuple (商, 余数)
 print(divmod(5, 3))
+
+# 复数运算
+print(compile(1, 3))
+
+
