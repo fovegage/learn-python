@@ -18,7 +18,6 @@ class VerfyInfo:
         self.f = FTP(self.ip)
         self.f.login(self.username, self.passwoed)
 
-
     def upload(self):
         self.instance()
         print(self.f.cwd('/root/'))
@@ -39,6 +38,8 @@ class VerfyInfo:
 
 
 VerfyInfo().upload()
+
+
 
 
 
