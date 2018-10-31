@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% end %}
+{% block header %}
+    <h1>这是填充的内容</h1>
+{% end %}
+{% block alert %}
+<h1>test 转义  autoescape转义</h1>
+{{ mailLink }}
+{% autoescape None %}
+Totally hacked your site lulz <script>alert('RUNNING EVIL H4CKS AND SPL01TS NOW...')</script>
+
+<h2>raw 不转义</h2>
+<p class="small">
+        Follow us on Facebook at
+        {% raw linkify("https://fb.me/burtsbooks", extra_params='ref=website') %}.
+</p>
+{% end %}

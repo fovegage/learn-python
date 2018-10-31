@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ static_url("css/style.css") }}">
+</head>
+<body>
+<h1>hello</h1>
+<p>测试加法：{{1+1}}</p>
+<p>测试python内置：{{'hello'[1:2]}}</p>
+<p>测试python遍历：{{[str(x*x) for x in range(10)]}}</p>
+<h1>if测试</h1>
+{% if a == 4%}
+<p>a=4</p>
+{% else %}
+<p>a = 0</p>
+{% end %}
+<h1>for测试</h1>
+{% for book in list %}
+<li>{{ book }}</li>
+{% end %}
+<h1>转义测试</h1>
+{{ escape(b) }}
+<h1>静态文件测试</h1>
+<p class="ls">应该是红色,且css源代码每次改动版本号均不同</p>
+</body>
+</html>
