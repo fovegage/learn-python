@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% end %}</title>
+    <title>{{title}}</title>
 </head>
 <body>
 <p>这里是继承内容</p>
 <header>
     {% block header %}{% end %}
 </header>
-{% block alert %}{% end %}
+{% block main %}{% end %}
 </body>
 </html>
