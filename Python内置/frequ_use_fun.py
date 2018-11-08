@@ -6,11 +6,11 @@
 # @Software: PyCharm
 
 # zip  iter --> tuple
-list1 = [1, 2, 3]
+list1 = [1, 2, 3, 5]
 list2 = [4, 5, 6]
 zipped = zip(list1, list2)
-# print(list(zipped))  # 为节省内存   返回obj  list取出
-print(list(zip(*zipped)))
+print(list(zipped))  # 为节省内存   返回obj  list取出 [(1, 4), (2, 5), (3, 6)]
+# print(list(zip(*zipped)))  # [(1, 2, 3), (4, 5, 6)]
 
 # type()
 print(type(3))
@@ -29,7 +29,9 @@ print(type(3))
 
 # memoryview()
 
-# map()
+# map()  [3, 6, 9]  返回map对象  即迭代器
+l = map(lambda x:x*3, [1, 2, 3])
+print(list(l))
 
 # frozenset()
 
