@@ -5,6 +5,8 @@
 # @File    : singlelist.py
 # @Software: PyCharm
 
+
+# 注意指向和赋值的关系 是一样的
 class SingleNode():
     def __init__(self, item):
         self.item = item
@@ -18,10 +20,62 @@ class SinleList():
     def is_empty(self):
         return self._head == None
 
-    def add(self, item):
-        node =SingleNode(item)
+    def length(self):
+        cur = self._head
+        count = 0
+        while cur != None:
+            count += 1
+            cur = cur.next
+        return count
+
+    def travel(self):
+        cur = self._head
+        while cur != None:
+            print(cur.item)
+            cur = cur.next
+
+    def headadd(self, item):
+        # 实例化一个结点
+        node = SingleNode(item)
+        # next指向新结点
         node.next = self._head
+        # 创建的新结点 赋给第一个结点
         self._head = node
+
+    def tailadd(self, item):
+        node = SingleNode(item)
+        if self.is_empty():
+            self._head = node
+        else:
+            cur = self._head
+            while cur.next != None:
+                cur = cur.next
+            cur.next = node
+
+
+    def insert(self, pos, item):
+        if pos <= 0:
+            self.headadd(item)
+        elif pos >= (self.length()-1):
+            self.tailadd(item)
+        else:
+            count = 0
+            node = SingleNode(item)
+            pre = self._head
+            while count < pos-1:
+                count += 1
+                pre = pre.next
+            #
+            node.next = pre.next
+            pre.next = node
+
+    def search(self, item):
+        cur = self._head
+        while cur != None:
+            if cur.item == item:
+                return True
+            cur = cur.next
+        return False
 
     def remove(self, item):
         """删除节点"""
@@ -46,7 +100,11 @@ class SinleList():
 
 if __name__ == '__main__':
     s = SinleList()
-    s.add(1)
-    s.remove(1)
-    s.add(2)
-    print(s.is_empty())
+    s.tailadd(5)
+    s.tailadd(6)
+    s.tailadd(7)
+    s.headadd(1)
+    s.insert(1, 100)
+    # print(s.length())
+    s.travel()
+    print(s.search(100))
