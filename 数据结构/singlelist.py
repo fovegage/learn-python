@@ -65,8 +65,9 @@ class SinleList():
             while count < pos-1:
                 count += 1
                 pre = pre.next
-            #
+            # pre.next 原先未断开的指向
             node.next = pre.next
+            # 已断开 指向node
             pre.next = node
 
     def search(self, item):
