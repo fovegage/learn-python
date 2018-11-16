@@ -20,3 +20,5 @@ class FileOperate():
 file = FileOperate('F:\\', 'l1.txt')
 print(file)
 
+
+

@@ -2,7 +2,7 @@
 # @Time    : 2018/11/14 14:06
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : circulist.py
+# @File    : singlecirculist.py
 # @Software: PyCharm
 
 class ListNode():
@@ -35,7 +35,7 @@ class CircuList():
         if self.is_empty():
             return 0
 
-        count = 1
+        count = 0
         cur = self._head
         while cur.next != self._head:
             count += 1

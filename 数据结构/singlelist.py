@@ -101,11 +101,11 @@ class SinleList():
 
 if __name__ == '__main__':
     s = SinleList()
-    s.tailadd(5)
-    s.tailadd(6)
-    s.tailadd(7)
-    s.headadd(1)
-    s.insert(1, 100)
+    # s.tailadd(5)
+    # s.tailadd(6)
+    # s.tailadd(7)
+    # s.headadd(1)
+    # s.insert(1, 100)
     # print(s.length())
-    s.travel()
+    # s.travel()
     print(s.search(100))
