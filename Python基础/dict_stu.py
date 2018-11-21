@@ -2,7 +2,7 @@
 # @Time    : 2018/11/6 15:15
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : dict.py
+# @File    : dict_stu.py
 # @Software: PyCharm
 
 l = dict(a=3, b=4)

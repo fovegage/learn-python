@@ -3,5 +3,5 @@
 
 ### Python基础
 
-- str
-- boolean
+- base_stu.py 扫盲
+- dcit_stu.py 字典相关操作

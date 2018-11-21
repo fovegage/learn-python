@@ -5,6 +5,8 @@
 # @File    : property_stu.py
 # @Software: PyCharm
 
+# 将方法转换为只读
+# 重新实现一个属性的设置和读取方法,可做边界判定
 class Money(object):
     def __init__(self):
         self.__money = 8
