@@ -22,7 +22,7 @@ print(type(3))
 # slice()
 
 # reversed()
-
+bool
 # range()
 
 # property()

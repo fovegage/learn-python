@@ -2,9 +2,11 @@
 # @Time    : 2018/11/8 9:51
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : file.py
+# @File    : file_stu.py
 # @Software: PyCharm
 
+
+# 没有汉字不加 b   有汉字加 b
 # r / w / a  读或写  覆盖
 # r+ / w+ / a+  读写
 # rb / wb / ab  二进制读或写  覆盖

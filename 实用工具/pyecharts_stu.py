@@ -2,7 +2,7 @@
 # @Time    : 2018/10/23 16:23
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : map.py
+# @File    : pyecharts_stu.py
 # @Software: PyCharm
 
 from pyecharts import Geo

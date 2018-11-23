@@ -23,7 +23,7 @@ for i in range(10):
     # 非堵塞运行
     p.apply_async(work, args=(i,))
     # 堵塞进行
-    p.apply(work, args=(i,))
+    # p.apply(work, args=(i,))
 
 
 print("开始")

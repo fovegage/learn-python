@@ -13,7 +13,8 @@ class MyspiderPipeline(object):
 
     # 必须实现且必须返回
     def process_item(self, item, spider):
-        content = json.dumps(dict(item)) + "\n"
+        # content = json.dumps(dict(item)) + "\n"
+        content = str(item) + '\n'
         self.file.write(content)
         return item
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/11/8 11:24
+# @Time    : 2018/11/23 11:19
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : __init__.py.py
+# @File    : 类装饰器.py
 # @Software: PyCharm

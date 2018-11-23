@@ -7,3 +7,7 @@
 
 l = dict(a=3, b=4)
 print(l)
+
+keys = ('name', 'age')
+dict = dict.fromkeys(keys, 10)
+print(dict)

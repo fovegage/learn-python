@@ -6,7 +6,14 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from .settings import USER_AGENTS
+import random
 
+
+class RandomAgent(object):
+    def process_request(self, request, spider):
+        useragent = random.choice(USER_AGENTS)
+        request.headers.setdefault("User-Agent", useragent)
 
 class MyspiderSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,

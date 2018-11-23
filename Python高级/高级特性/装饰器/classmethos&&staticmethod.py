@@ -2,7 +2,7 @@
 # @Time    : 2018/11/13 11:14
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : Python方法.py
+# @File    : classmethos&&staticmethod.py
 # @Software: PyCharm
 
 #  静态方法   实例方法  类方法
@@ -15,7 +15,7 @@ class People():
     def getContury():
         print(People.countury)
 
-People().getContury()
+# People().getContury()
 
 # 静态类
 
@@ -24,7 +24,8 @@ class Student():
 
     @classmethod
     def getName(cls):
-        return cls.name
+        c= cls()
+        return cls.name, c
 
 print(Student.getName())
 

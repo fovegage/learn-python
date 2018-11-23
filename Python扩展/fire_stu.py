@@ -2,7 +2,7 @@
 # @Time    : 2018/11/19 14:24
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : fire.py
+# @File    : fire_stu.py
 # @Software: PyCharm
 import fire
 
