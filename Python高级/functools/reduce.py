@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/10/24 13:14
+# @Time    : 2018/11/28 11:30
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : functools_stu.py
+# @File    : reduce.py
 # @Software: PyCharm
 
 import functools

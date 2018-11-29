@@ -4,3 +4,11 @@
 # @Email   : fovegage@gmail.com
 # @File    : slot_stu.py
 # @Software: PyCharm
+
+class A():
+    __slots__ = ('name', 'age')
+
+
+a = A()
+a.name = 'Gage'
+print(a.name)

@@ -20,6 +20,9 @@ class MyspiderItem(scrapy.Item):
     tinfo = scrapy.Field()
     tlocal = scrapy.Field()
 
-
+    # douyu
+    dname = scrapy.Field()
+    durl = scrapy.Field()
+    dpath = scrapy.Field()
 
 

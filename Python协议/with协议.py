@@ -18,6 +18,8 @@ class Close():
         except AttributeError:
             print(exc_type)
 
+
+# 这是我们自定义的  上下文管理器    它自带close() 功能
 with Close(int(5)) as i:
     i += 1
     print(i)

@@ -77,7 +77,9 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'mySpider.pipelines.MyspiderPipeline': 300,
+    # 'mySpider.pipelines.MyspiderPipeline': 300,
+    # 'mySpider.pipelines.ImagePiple':200,
+    'mySpider.pipelines.MongoPiple':200
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -100,5 +102,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+IMAGES_STORE = 'E:\\'
 
 

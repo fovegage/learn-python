@@ -9,7 +9,7 @@ from scrapy import signals
 from .settings import USER_AGENTS
 import random
 
-
+# 随机请求头
 class RandomAgent(object):
     def process_request(self, request, spider):
         useragent = random.choice(USER_AGENTS)

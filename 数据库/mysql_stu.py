@@ -17,3 +17,12 @@ def query(sql):
         print("Error: unable to fetch data")
 
     db.close()
+
+print(query('select * from good'))
+
+
+
+class Query():
+    def __init__(self, sql, host, username, password, database):
+        self.sql
+
