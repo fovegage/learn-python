@@ -2,7 +2,7 @@
 # @Time    : 2018/11/6 11:50
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : 迭代&生成.py
+# @File    : 迭代器.py
 # @Software: PyCharm
 
 # 即常见的数据类型是容器  即可迭代对象
@@ -29,6 +29,3 @@ print(next(y))
 # 把可迭代对象转成迭代器可以节约内存  用几个取几个  用 next() __next__()
 # 它是一个带状态的对象
 print(iter([1, 2]))
-
-# 生成器   即可迭代对象
-print([x*x for x in range(1,5)])

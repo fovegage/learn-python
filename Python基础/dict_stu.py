@@ -5,9 +5,9 @@
 # @File    : dict_stu.py
 # @Software: PyCharm
 
-l = dict(a=3, b=4)
-print(l)
+# l = dict(a=3, b=4)
+# print(l)
 
 keys = ('name', 'age')
-dict = dict.fromkeys(keys, 10)
+dict = dict.fromkeys(keys, )
 print(dict)

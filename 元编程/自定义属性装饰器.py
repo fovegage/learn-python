@@ -2,17 +2,19 @@
 # @Time    : 2018/11/23 14:37
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : 自定义.py
+# @File    : 自定义属性装饰器.py
 # @Software: PyCharm
 
 from functools import partial, wraps
 import logging
 
-def attach_wrap(obj, func=None):
+
+def attach_wrap(obj, func=None): # func 判断用
     if func is None:
         return partial(attach_wrap, obj)
-    setattr(obj, func.__name__, func)
-    return func
+    setattr(obj, func.__name__, func)  # obj key value
+    print(func.__name__)
+    return func   # 返回一个绑定对象
 
 # 这层定义参数传递
 def log(level, name=None, message=None):
@@ -32,22 +34,18 @@ def log(level, name=None, message=None):
             return func(*args, **kwargs)
 
         # 设置参数
-        @attach_wrap(wrapper)
+        @attach_wrap(wrapper)  # wrapper 为装饰器处理的所有结果
         def set_level(newlevel):
-            nonlocal level
+            nonlocal level   # 他将修改全局变量
             level = newlevel
 
         return wrapper
     return decorate
 
-@log(logging.DEBUG)
-def add(a, b):
-    return a + b
-
-logging.basicConfig(level=logging.DEBUG)
-print(add(3, 5))
-
-add.set_level(logging.WARNING)
-print(add(5, 6))
+@log(logging.DEBUG, name='hello')
+def add(x, y):
+    return x + y
 
 
+add.set_level(logging.WARN)
+print(add(2, 3))

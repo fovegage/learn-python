@@ -5,7 +5,7 @@
 # @File    : script_stu.py
 # @Software: PyCharm
 from flask import Flask, request
-from  flask_script import Manager
+from flask_script import Manager
 
 app = Flask(__name__)
 manager = Manager(app)

@@ -5,6 +5,7 @@
 # @File    : call_stu.py
 # @Software: PyCharm
 
+#  可调用对象
 class A():
     def __call__(self, a):
         self.a = a
@@ -30,7 +31,24 @@ class Entity():
         print(self.x, self.y)
 
 e = Entity(3, 4, 3)
-e.__call__(3, 5)
+e(3, 5)   # e.__call__(3, 5)  两者作用一样
+
+
+class Fab():
+
+    def __call__(self, *args, **kwargs):
+        a, b = 0, 1
+        self.list = []
+        for i in range(*args, **kwargs):
+            self.list.append(b)
+            a, b = b, a+b
+        return self.list
+
+    def __str__(self):
+        return self.list
+
+f = Fab()
+print(f(10))
 
 
 

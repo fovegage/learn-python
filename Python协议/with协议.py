@@ -5,6 +5,7 @@
 # @File    : with协议.py
 # @Software: PyCharm
 
+# 自己实现的上下文管理器
 class Close():
     def __init__(self, obj):
         self.obj = obj
@@ -23,3 +24,4 @@ class Close():
 with Close(int(5)) as i:
     i += 1
     print(i)
+

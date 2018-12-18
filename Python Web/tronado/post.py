@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/10/29 16:38
-# @Author  : fovegage
-# @Email   : fovegage@gmail.com
-# @File    : post.py
-# @Software: PyCharm
-
 import tornado.ioloop
 import tornado.httpserver
 import tornado.web
@@ -14,8 +8,9 @@ define('port', default=8088, type=int, help='please run this port')
 class Post(tornado.web.RequestHandler):
 
     def post(self):
-        text = self.get_argument('text')
-        self.write(text)
+        name = self.get_argument('name')
+        city = self.get_argument('city')
+        self.write('Hope {} in {} happy.'.format(name, city))
 
 if __name__ == '__main__':
     tornado.options.parse_command_line()

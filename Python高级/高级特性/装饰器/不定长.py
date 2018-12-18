@@ -6,6 +6,7 @@
 # @Software: PyCharm
 
 # 不定长
+
 def C(fun):
     def C_in(*args, **kwargs):
         return args, kwargs
@@ -15,13 +16,14 @@ def C(fun):
 @C
 def D(a, b):
     pass
+
 print(D(1, 2, {'x':7}))
 
 
 from time import ctime, sleep
 
-def timefun(func):
-    def wrappedfunc(*args):
+def timefun(func):  # func 接受函数
+    def wrappedfunc(*args):  # *args 接受参数
         print("%s called at %s"%(func.__name__, ctime()))
         func(*args)
     return wrappedfunc

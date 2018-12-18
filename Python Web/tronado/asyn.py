@@ -12,6 +12,7 @@ from tornado import httpclient, gen
 
 from tornado.options import define, options
 
+
 define('port', 5948, type=int, help='port')
 
 
@@ -22,6 +23,7 @@ class Index1(tornado.web.RequestHandler):
     def get(self):
         http = httpclient.AsyncHTTPClient()
         http.fetch('http://pv.sohu.com/cityjson', callback=self.response)
+        self.render('mod/hi.html')
 
     def response(self, response):
         if response.error:
@@ -29,7 +31,7 @@ class Index1(tornado.web.RequestHandler):
         else:
             self.write(response.body)
 
-        self.finish()
+        # self.finish()
 
 # 协程异步
 class Index2(tornado.web.RequestHandler):
@@ -42,7 +44,7 @@ class Index2(tornado.web.RequestHandler):
             self.send_error(500)
         else:
             self.write(response.body)
-
+import time
 # 并行协程
 class Index3(tornado.web.RequestHandler):
     @gen.coroutine
@@ -53,6 +55,8 @@ class Index3(tornado.web.RequestHandler):
         self.response(id[0], ret1)
         self.response(id[1], ret2)
         self.response(id[2], ret_dict['ret3'])
+        self.render('mod/hi.html')
+        self.baidu()
 
     def response(self, id, price):
         self.write(id)
@@ -60,11 +64,15 @@ class Index3(tornado.web.RequestHandler):
         self.write('<br>')
 
     @gen.coroutine
+    def baidu(self):
+        self.redirect('https://www.baidu.com/')
+
+    @gen.coroutine
     def get_info(self, id):
         http_client = tornado.httpclient.AsyncHTTPClient()
         response = yield http_client.fetch('http://p.3.cn/prices/mgets?skuIds=J_{}&type=1'.format(id))
         raise gen.Return(response.body)
-
+import os
 if __name__ == '__main__':
     app = tornado.web.Application(
         handlers=[(
@@ -72,6 +80,8 @@ if __name__ == '__main__':
             # r'/',Index2,
             r'/',Index3
         )],
+        template_path=os.path.join(os.path.dirname(__file__), "templates"),
+        static_path=os.path.join(os.path.dirname(__file__), "static"),
         debug=True
     )
     http_server = tornado.httpserver.HTTPServer(app)

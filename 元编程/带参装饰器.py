@@ -2,7 +2,7 @@
 # @Time    : 2018/11/23 12:09
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : log.py
+# @File    : 带参装饰器.py
 # @Software: PyCharm
 import logging
 from functools import wraps
@@ -27,7 +27,7 @@ def logged(level, name=None, message=None):
         return wrapper
     return decorate
 
-@logged(logging.DEBUG)
+@logged(logging.DEBUG, name='hello')
 def add(a, b):
     return a+b
 

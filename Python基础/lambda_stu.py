@@ -12,3 +12,7 @@ def fun2(x, y):
     return x*y
 
 print(fun2(2, 3))
+
+
+l = lambda: 5
+print(l())

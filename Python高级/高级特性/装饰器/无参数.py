@@ -4,12 +4,13 @@
 # @Email   : fovegage@gmail.com
 # @File    : 无参数.py
 # @Software: PyCharm
-from functools import wraps
+
+# 装饰器即验证函数
 # 无参数
-def makeBold(fn):
-    def wrapped():
-        return "<b>" + fn() + "</b>"
-    return wrapped
+def makeBold(fun):  #  接受函数
+    def wrapped():  # 接受参数
+        return "<b>" + fun() + "</b>"  # 第一步 返出 验证
+    return wrapped  # 将内部函数返出
 
 @makeBold
 def test1():

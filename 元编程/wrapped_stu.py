@@ -7,6 +7,7 @@
 
 from functools import wraps
 
+# 在我们调试代码的时候  我们使用 wrapped 来取消对函数的装饰
 def dec1(fun):
     @wraps(fun)
     def wrapper(*args, **kwargs):
@@ -22,10 +23,10 @@ def dec2(fun):
     return wrapper
 
 @dec1
-@dec2
+# @dec2
 def add(a, b):
     return a+b
 
 print(add(2, 4))
 print('-------------------')
-print(add.__wrapped__(2, 3))
+print(add.__wrapped__(2, 3))   # 若被多个装饰器包装  结果不可预知  而被单个装饰器包装  则会直接忽略装饰器
