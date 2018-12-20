@@ -5,6 +5,7 @@
 # @File    : super_stu.py
 # @Software: PyCharm
 
+# 和Java一样  子类实列化  父类也实例化   反之不可以
 class Person():
     def __init__(self, name):
         self.name = name

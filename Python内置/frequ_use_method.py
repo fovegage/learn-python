@@ -37,7 +37,8 @@ for i in  iter(dict):
 
 # next
 it = iter([1, 2, 3, 4, 5])
-# iterator  不可len()
+# iterator  不
+#可len()
 while True:
     try:
         x = next(it)
