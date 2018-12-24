@@ -121,6 +121,15 @@ print(str.ljust(7, "#"))
 str = 'hello'
 print(str.lstrip(''))
 
+# 切片
+str = 'hello'
+print(str[:])
+print(str[0:])
+print(str[::])
+print(str[0:4:2])
+print(str[-3])
+print(str[::-1])
+
 
 
 

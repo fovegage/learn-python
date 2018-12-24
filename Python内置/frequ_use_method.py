@@ -112,10 +112,7 @@ try:
 except:
     print('a被删除了')
 
-# sorted  reverse key
-list = [1, 55, 244, 7, 3]
-print(sorted(list, reverse=True))
-print(sorted(list, key=lambda x: len(str(x))))
+
 
 # sum
 print(sum([1, 3, 4], 99))

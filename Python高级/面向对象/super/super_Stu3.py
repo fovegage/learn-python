@@ -6,6 +6,7 @@
 # @Software: PyCharm
 
 # 重写
+# __mro__ 查看类调用顺序
 class A:
     def __init__(self, obj):
         self.obj = obj

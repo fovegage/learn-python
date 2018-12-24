@@ -5,7 +5,7 @@
 # @File    : collections_stu.py
 # @Software: PyCharm
 
-from collections import Counter, deque, OrderedDict, defaultdict
+from collections import Counter, deque, OrderedDict, defaultdict, Sequence
 
 
 d = {'2': 3, '3': 2, '17': 2, '3': 2, '17': 2, 'y':8}
@@ -31,4 +31,4 @@ print(de)
 de.appendleft('d')
 print(de)
 
-#
+

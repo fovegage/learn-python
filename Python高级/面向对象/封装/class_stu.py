@@ -4,3 +4,14 @@
 # @Email   : fovegage@gmail.com
 # @File    : class_stu.py
 # @Software: PyCharm
+
+class person():
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+p = person('Gage', 24)
+print(p.age)
+

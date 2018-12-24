@@ -5,6 +5,8 @@
 # @File    : slot_stu.py
 # @Software: PyCharm
 
+
+# 可以节省内存
 class A():
     __slots__ = ('name', 'age')
 

@@ -35,5 +35,5 @@ token = str(m1.hexdigest()).upper()
 pay_data['sign'] = token
 
 # print(pay_data)
-ret1 = requests.post('https://pay.gaozhe.top/order/add', data=pay_data)
+ret1 = requests.post('http://127.0.0.1:23459/order/add', data=pay_data)
 print(ret1.text)

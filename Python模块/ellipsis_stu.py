@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/12/18 15:52
+# @Time    : 2018/12/21 18:17
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : __init__.py.py
+# @File    : ellipsis_stu.py
 # @Software: PyCharm
