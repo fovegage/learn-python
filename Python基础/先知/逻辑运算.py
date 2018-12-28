@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/12/18 11:42
+# @Time    : 2018/12/27 17:47
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : time_stu.py
+# @File    : 逻辑运算.py
 # @Software: PyCharm
 
-import time
 
-time.sleep(5) # 延时
+# 逻辑运算符  or and not
+print(not 3)
