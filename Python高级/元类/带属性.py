@@ -9,3 +9,4 @@
 foo = type('Foo', (), {'a': 3})
 
 print(foo.a)
+

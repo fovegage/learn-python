@@ -5,7 +5,14 @@
 # @File    : 比较问题.py
 # @Software: PyCharm
 
-a = 'cheesezh'
-b = 'cheesezh'
+import copy
+
+# is 比较的是内存地址   == 比较内容和数据类型
+a = [1, 2, 3]
+b = a
 print(a is b)
 print(a == b)
+
+c = copy.deepcopy(a)
+print(a is c)
+print(a == c)
