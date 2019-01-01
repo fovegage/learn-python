@@ -25,6 +25,6 @@ class User(Base):
     name = Column(String(20))
 
 # 初始化数据库连接:
-engine = create_engine('mysql://root:416798@localhost/test')
+engine = create_engine('Mysql://root:416798@localhost/test')
 # 创建DBSession类型:
 DBSession = sessionmaker(bind=engine)
