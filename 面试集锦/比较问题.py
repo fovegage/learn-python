@@ -16,3 +16,15 @@ print(a == b)
 c = copy.deepcopy(a)
 print(a is c)
 print(a == c)
+
+
+
+def num(n):
+    n = n + n
+    print(n)
+
+x = [1, 2]
+num(x)
+print(x)
+
+
