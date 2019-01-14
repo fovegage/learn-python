@@ -6,6 +6,9 @@
 # @Software: PyCharm
 import pymysql
 
+
+
+
 def query(sql):
     db = pymysql.connect("localhost", "root", "416798", "hahaha")
     cursor = db.cursor()
