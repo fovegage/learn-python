@@ -7,11 +7,11 @@
 
 # 添加一个key
 dict = {'name': 'Gage', 'age': 18}
-dict['sex'] = 'man'
+dict['name'] = 'man'
 print(dict)
 
 
-# 遍历添加
-dict1 = {'sex': "man", "score": 100}
-dict.update(dict1)
-print(dict)
+# # 遍历添加
+# dict1 = {'sex': "man", "score": 100}
+# dict.update(dict1)
+# print(dict)

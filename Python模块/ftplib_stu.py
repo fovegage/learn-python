@@ -22,7 +22,7 @@ class VerfyInfo:
         self.instance()
         print(self.f.cwd('/root/'))
         file_remote = 'ftp_upload.txt'
-        file_local = 'F:\\a.txt'
+        file_local = 'F:\\b.json'
         bufsize = 1024  # 设置缓冲器大小
         fp = open(file_local, 'rb')
         self.f.storbinary('STOR ' + file_remote, fp, bufsize)

@@ -8,3 +8,5 @@
 dict = {'name': 'Gage', 'age': 18}
 dict['age'] = 24
 print(dict)
+
+dict['name'].append(3)

@@ -23,3 +23,4 @@ schedule.every().wednesday.at("13:15").do(job)
 while True:
     schedule.run_pending()
     time.sleep(1)
+
