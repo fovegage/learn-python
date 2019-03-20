@@ -12,6 +12,7 @@ import os
 # load()：读取json文件数据，转成dict数据
 # dump()：将dict数据转化成json数据后写入json文件
 
+# 字符操作
 # dumps()：将dict数据转化成json数据
 dict = {'a':1, 'b':2}
 t = json.dumps(dict)
@@ -21,6 +22,8 @@ print(t, type(t), type(dict))
 l = json.loads(t)
 print(l , type(l))
 
+
+# 文件操作
 # load()：读取json文件数据，转成dict数据
 print(os.getcwd()+'\\a.json')
 with open(os.getcwd()+'\\a.json', 'r+', encoding='utf-8') as f:

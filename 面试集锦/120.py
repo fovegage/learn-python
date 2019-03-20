@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 
 
+
+
+print(sum(range(0, 101)))
 # 作用域
 num = 5
 
@@ -170,3 +172,58 @@ print(s[::-1])
 # int("1.4")、int(1.4)的输出结果？
 # print(int("1.4"))
 print(int(1.4))
+
+
+# 生成器 [i for i in range(3)]改成生成器
+
+class iter():
+
+    def __init__(self, data):
+        self.data = data
+        self.loop = -1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.loop >= self.data:
+            raise StopIteration
+
+        self.loop += 1
+        return self.loop
+
+
+for i in iter(3):
+    print(i)
+
+# python中读取Excel文件的方法
+import pandas
+# read_excel = pandas.read_excel("test.xlsx")
+# print(read_excel)
+
+# 匹配url
+import re
+pattern = re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')    # 匹配模式
+
+string = 'Its after 12 noon, do you know where your rooftops are? https://blog.gaozhe.top '
+url = re.findall(pattern,string)
+print(url)
+
+
+import re
+a = "not 404 found 中国 2018 我爱你"
+r1 = '[a-zA-Z0-9’!"#$%&\'()*+,-./:;<=>?@，。?★、…【】《》？“”‘’！[\\]^_`{|}~]+\s?'
+print(re.sub(r1, '', a))
+
+
+# 获取请求头的参数？
+
+from urllib.parse import urlparse, parse_qs
+s2 = "/get_feed_list?version_name=5.0.9.0&device_id=12242channel_name=google"
+def spiltline(value):
+    url = {'site': urlparse(value).path}
+    url.update(parse_qs(urlparse(value).query))
+    return url
+
+print(spiltline(s2))
+

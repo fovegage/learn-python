@@ -7,6 +7,7 @@
 
 list = ['xiaohong', 'xiaogang', 'xiaoming']
 
+# 使用for
 for i in list:
     print(i)
 
