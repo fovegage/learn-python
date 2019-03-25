@@ -174,7 +174,7 @@ print(s[::-1])
 print(int(1.4))
 
 
-# 生成器 [i for i in range(3)]改成生成器
+# 迭代器 [i for i in range(3)]改成生成器
 
 class iter():
 
