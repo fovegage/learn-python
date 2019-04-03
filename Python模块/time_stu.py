@@ -15,6 +15,7 @@ print(time.altzone)  # 格林威治西部的夏令时地区的偏移秒数
 print(time.daylight)
 print(time.timezone)
 print(time.tzname[0].encode('latin-1').decode('gbk'))   # 中国夏令时
+
 # int tm_sec; /* 秒 – 取值区间为[0,59] */
 # int tm_min; /* 分 - 取值区间为[0,59] */
 # int tm_hour; /* 时 - 取值区间为[0,23] */
@@ -63,11 +64,14 @@ print(time.process_time())
 # print(time.sleep(2))
 
 # 格式化时间  将 struct_time  转化为 str  未指定 localtime
+# 2019-04-02 15:47:24
 print(time.strftime("%Y-%m-%d %H:%M:%S"))
 
 # str -> struct_time
 struct_time = time.strptime("30 Nov 18", "%d %b %y")
 print(struct_time)
+struct_time1 = time.strptime('2018-07-11 17:41:20', '%Y-%m-%d %H:%M:%S')
+print(struct_time1)
 
 # 秒
 print(time.time())
