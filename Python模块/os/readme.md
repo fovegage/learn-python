@@ -1,2 +1,6 @@
 - path 获取文件的属性信息
 - access 检验权限模式
+- os.F_OK: 作为access()的mode参数，测试path是否存在。
+- os.R_OK: 包含在access()的mode参数中 ， 测试path是否可读。
+- os.W_OK 包含在access()的mode参数中 ， 测试path是否可写。
+- os.X_OK 包含在access()的mode参数中 ，测试path是否可执行。
