@@ -2,7 +2,7 @@
 # @Time    : 2018/10/18 9:18
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : abs_Stu.py
+# @File    : abs_stu.py
 # @Software: PyCharm
 
 

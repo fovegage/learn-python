@@ -12,7 +12,8 @@
 # error : 打印error,critical级别的日志,更严重的问题,软件没能执行一些功能
 # critical : 打印critical级别,一个严重的错误,这表明程序本身可能无法继续运行
 
+
 import logging
 
-logging.basicConfig(level=logging.NOTSET, format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+logging.basicConfig(filename='my.log', level=logging.NOTSET, format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 logging.debug('hello')  # 将在控制台回显  为红色

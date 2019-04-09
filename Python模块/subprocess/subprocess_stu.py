@@ -5,7 +5,7 @@
 # @File    : subprocess_stu.py
 # @Software: PyCharm
 
-
+import subprocess
 try:
     a = 1 / 0
 except:
