@@ -1,6 +1,6 @@
 <div align="center">
 
-## 最浅显易懂、最全面的Python教程
+## 最浅显易懂、最全面的Python教程，持续更新
 
 **本教程基于Python3.0+，将带你全方位刨析Python内部原理**
 
