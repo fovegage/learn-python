@@ -5,6 +5,7 @@
 # @File    : struct_stu.py
 # @Software: PyCharm
 
+
 import struct
 import base64
 print(bytes(10240099))

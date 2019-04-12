@@ -2,7 +2,7 @@
 # @Time    : 2018/12/13 13:39
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : 自实现.py
+# @File    : word.py
 # @Software: PyCharm
 
 class And(int):
