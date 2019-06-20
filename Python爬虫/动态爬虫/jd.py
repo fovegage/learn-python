@@ -15,7 +15,7 @@ import time
 class JD():
     def __init__(self, username, password):
         self.driver = webdriver.Chrome(executable_path='./chromedriver')
-        self.username = username
+        elf.username = username
         self.password = password
 
     def login(self):

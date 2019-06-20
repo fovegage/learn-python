@@ -2,7 +2,7 @@
 # @Time    : 2018/11/16 15:46
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : queue.py
+# @File    : 自实现.py
 # @Software: PyCharm
 
 class Queue():

@@ -11,7 +11,7 @@ import socket
 tcpsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 链接服务器
-tcpsocket.connect(('192.168.16.1', 8889))
+tcpsocket.connect(('127.0.0.1', 8888))
 
 # 输入
 tcpsocket.send(input('请输入').encode())
@@ -22,3 +22,5 @@ print(data)
 
 # 关闭
 tcpsocket.close()
+
+import select

@@ -11,7 +11,7 @@ import socket
 tcpserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 绑定本地端口信息   即服务器端口
-bindip = ('', 8888)
+bindip = ('0.0.0.0', 8888)
 tcpserver.bind(bindip)
 
 # 监听
@@ -19,6 +19,7 @@ tcpserver.listen(5)
 
 # 子链接
 childsocket, ip = tcpserver.accept()
+print(childsocket, ip)
 
 # 接受
 data = childsocket.recv(1024)

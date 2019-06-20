@@ -2,7 +2,7 @@
 # @Time    : 2018/12/18 18:02
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : base.py
+# @File    : check.py
 # @Software: PyCharm
 
 from tornado import web, escape
