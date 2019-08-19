@@ -8,6 +8,7 @@ p = Path('E:\study')
 # 输出实例化的绝对路径
 print(p.absolute())
 
+
 # 判断路径是否存在
 print(p.exists())
 
