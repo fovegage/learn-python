@@ -7,7 +7,7 @@
 
 
 # 注意指向和赋值的关系 是一样的
-class SingleNode():
+class SingleNode:
     def __init__(self, item):
         self.item = item
         self.next = None
@@ -52,17 +52,16 @@ class SinleList():
                 cur = cur.next
             cur.next = node
 
-
     def insert(self, pos, item):
         if pos <= 0:
             self.headadd(item)
-        elif pos >= (self.length()-1):
+        elif pos >= (self.length() - 1):
             self.tailadd(item)
         else:
             count = 0
             node = SingleNode(item)
             pre = self._head
-            while count < pos-1:
+            while count < pos - 1:
                 count += 1
                 pre = pre.next
             # pre.next 原先未断开的指向
@@ -101,11 +100,11 @@ class SinleList():
 
 if __name__ == '__main__':
     s = SinleList()
-    # s.tailadd(5)
-    # s.tailadd(6)
+    s.tailadd(5)
+    s.tailadd(6)
     # s.tailadd(7)
     # s.headadd(1)
     # s.insert(1, 100)
     # print(s.length())
-    # s.travel()
+    s.travel()
     print(s.search(100))
