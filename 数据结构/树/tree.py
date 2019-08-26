@@ -5,13 +5,14 @@
 # @File    : tree.py
 # @Software: PyCharm
 
-class Node():
+class Node:
     def __init__(self, elem=-1, lchild=None, rchild=None):
-        self.elem = elem
+        self.val = elem
         self.lchild = lchild
         self.rchild = rchild
 
-class Tree():
+
+class Tree:
     def __init__(self, root=None):
         self.root = root
 
@@ -42,7 +43,33 @@ class Tree():
                     # 如果左右子树都不为空，加入队列继续判断
                     queue.append(cur.lchild)
                     queue.append(cur.rchild)
+
+    def PreOrder(self, root):
+        '''打印二叉树(先序)'''
+        if root == None:
+            return
+        print(root.val, end=" ")
+        self.PreOrder(root.lchild)
+        self.PreOrder(root.rchild)
+
+    def InOrder(self, root):
+        if root == None:
+            return
+        self.InOrder(root.lchild)
+        print(root.val,end=' ')
+        self.InOrder(root.rchild)
+
+    def NextOrder(self, root):
+        if root == None:
+            return
+        self.InOrder(root.lchild)
+        self.InOrder(root.rchild)
+        print(root.val, end=' ')
+
+
 t = Tree()
-t.add(5)
-t.add(6)
-t.add(7)
+for i in range(1, 10):
+    t.add(i)
+
+
+t.NextOrder(t.root)
