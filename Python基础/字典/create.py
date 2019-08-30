@@ -25,7 +25,7 @@ info = {i: i + 1 for i in range(3)}
 print(info)
 
 # fromkeys()
-info = dict.fromkeys(['name', 'sex'], '1')
+info = dict.fromkeys(range(1, 13), '1')
 print(info)
 
 # 特殊

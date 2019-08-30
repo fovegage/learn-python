@@ -72,4 +72,4 @@ for i in range(1, 10):
     t.add(i)
 
 
-t.NextOrder(t.root)
+t.InOrder(t.root)

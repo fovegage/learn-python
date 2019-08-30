@@ -6,7 +6,7 @@
 # @Software: PyCharm
 
 import time
-from datetime import datetime, date
+from datetime import datetime
 
 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fold', 'fromordinal', \
 'fromtimestamp', 'hour', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'microsecond',\
