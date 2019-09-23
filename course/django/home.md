@@ -1,4 +1,4 @@
-### Bug 记录册 :id=django
+### Django学习记录 :id=django
 
 > 记录 Python 工作学习中的各种坑
 
