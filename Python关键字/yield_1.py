@@ -1,3 +1,4 @@
+# 参考链接
 # http://www.simeonvisser.com/posts/python-3-using-yield-from-in-generators-part-2.html
 # http://www.simeonvisser.com/posts/python-3-using-yield-from-in-generators-part-1.html
 s = 'abc'

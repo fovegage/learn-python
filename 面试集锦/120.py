@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 
-
-
 print(sum(range(0, 101)))
 # 作用域
 num = 5
@@ -166,7 +164,7 @@ del dic['age']
 print(dic)
 
 # 对s="hello"进行反转
-s="hello"
+s = "hello"
 print(s[::-1])
 
 # int("1.4")、int(1.4)的输出结果？
@@ -203,27 +201,30 @@ import pandas
 
 # 匹配url
 import re
-pattern = re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')    # 匹配模式
+
+pattern = re.compile(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')  # 匹配模式
 
 string = 'Its after 12 noon, do you know where your rooftops are? https://blog.gaozhe.top '
-url = re.findall(pattern,string)
+url = re.findall(pattern, string)
 print(url)
 
-
 import re
+
 a = "not 404 found 中国 2018 我爱你"
 r1 = '[a-zA-Z0-9’!"#$%&\'()*+,-./:;<=>?@，。?★、…【】《》？“”‘’！[\\]^_`{|}~]+\s?'
 print(re.sub(r1, '', a))
 
-
 # 获取请求头的参数？
 
 from urllib.parse import urlparse, parse_qs
+
 s2 = "/get_feed_list?version_name=5.0.9.0&device_id=12242channel_name=google"
+
+
 def spiltline(value):
     url = {'site': urlparse(value).path}
     url.update(parse_qs(urlparse(value).query))
     return url
 
-print(spiltline(s2))
 
+print(spiltline(s2))
