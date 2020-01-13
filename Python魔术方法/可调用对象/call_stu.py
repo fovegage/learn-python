@@ -14,10 +14,13 @@ class A():
     def print(self):
         print(self.a)
 
+
 t = A()
 t(5)
+print(t.__dict__)
 
-t.print()
+
+# t.print()
 
 class Entity():
 
@@ -30,28 +33,31 @@ class Entity():
         self.x, self.y = y, x
         print(self.x, self.y)
 
+
 e = Entity(3, 4, 3)
-e(3, 5)   # e.__call__(3, 5)  两者作用一样
+e(3, 5)  # e.__call__(3, 5)  两者作用一样
+
+print(e.__dict__)
 
 
-class Fab():
+class Fab:
+
+    # def __init__(self, start):
+    #     self.start = start
 
     def __call__(self, *args, **kwargs):
+        print(args)
         a, b = 0, 1
         self.list = []
         for i in range(*args, **kwargs):
             self.list.append(b)
-            a, b = b, a+b
+            a, b = b, a + b
         return self.list
 
-    def __str__(self):
-        return self.list
-
-f = Fab()
-print(f(10))
+    # def __str__(self):
+    #     return self.list
 
 
-
-
-
-
+print(Fab()(10))
+# f = Fab()
+# print(f(10))

@@ -20,8 +20,6 @@ class UpperAtrr(type):
 class A(metaclass=UpperAtrr):
     bar = 'bip'
 
+
 print(hasattr(A, 'bar'))
 print(A.BAR)
-
-
-

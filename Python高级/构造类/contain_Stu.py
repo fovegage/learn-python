@@ -14,16 +14,32 @@ class SortList():
     def __getitem__(self, index):
         return self._item[index]
 
+    def __setitem__(self, key, value):
+        self._item[key] = value
+
     # 没有
     def __len__(self):
         return len(self._item)
 
     def add(self, item):
+        """
+        为了避免返回None，应该return
+        :param item:
+        :return:
+        """
         import bisect
         bisect.insort(self._item, item)
+        return item
+
+    def __repr__(self):
+        return 'num'
+
 
 s = SortList([1, 5, 6])
 print(s[2])
 print(s.add(99))
 print(list(s))
 print(len(s))
+
+
+

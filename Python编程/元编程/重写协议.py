@@ -15,16 +15,39 @@ def log(cls):
     cls.__getattribute__ = new_getattribute
     return cls
 
+
 @log
 class A():
     def __init__(self, x):
         self.x = x
+
     def method(self):
         pass
 
-a = A(5)
-a.x
-a.method()
+
+# a = A(5)
+# a.x
+# a.method()
 
 
+class B:
+    def __init__(self, age):
+        self.age = age
 
+    def __getattr__(self, item):
+        print(f'{item}不存在')
+        return f'{item}不存在1'
+
+    def __getattribute__(self, item):
+        print(f'访问{item}')
+        return object.__getattribute__(self, item)
+
+    def test(self):
+        print('test 方法')
+
+
+b = B(8)
+b.age
+b.test()
+print('#' * 100)
+print(b.name)

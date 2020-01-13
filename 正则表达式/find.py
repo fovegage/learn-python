@@ -7,13 +7,16 @@
 
 import re
 
+a = 'kdsslllslsl'
+b = 'h52177jsal2819kak22ka'
+
 pattern = re.compile(r'\d+')
 # 全部找出来 findall  返回list
-findall = pattern.findall('h52177jsal2819kak22ka')
+findall = pattern.findall(b)
 print(findall)
 
 # 全部找出来 返回迭代器
-finditer = pattern.finditer('h52177jsal2819kak22ka')
+finditer = pattern.finditer(a)
 print(finditer)
 
 # 中文匹配

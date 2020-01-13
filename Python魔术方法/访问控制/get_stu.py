@@ -27,14 +27,16 @@ class Inter():
     def __delete__(self, instance):
         del instance.__dict__[self.name]
 
+
 class Point():
     x = Inter('x')
     y = Inter('y')
 
-    def __init__(self,x ,y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
-p = Point(2, 3)
+
+p = Point(2, 7)
 print(p.x)
 # p.x = 2.5

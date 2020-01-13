@@ -16,5 +16,5 @@ demo = 'Gage has {num} messages.'
 print(demo.format(num=38))
 
 # format_mat
-point = {'x':4, 'y':5}
+point = {'x': 4, 'y': 5}
 print('{x}, {y}'.format_map(point))

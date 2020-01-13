@@ -12,18 +12,26 @@ def fun(num):
 
     return inner
 
-a = fun(5)
-print(fun(5)(10))  # 链式调用
 
+# a = fun(5)
+# print(a(18))
+# print(fun(5)(10))  # 链式调用
+
+# print('#'*10)
 # 函数调用类  工厂类
 def class_factory():
     class Foo(object):
         def print(self):
-            print(5)
+            print(1)
+
+    class Bar:
+        def print(self):
+            print(2)
+
     return Foo
 
 
 F = class_factory()
 f = F()
-f.print()
+# f.print()
 print(type(f))
