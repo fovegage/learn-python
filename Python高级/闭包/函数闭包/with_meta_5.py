@@ -11,3 +11,5 @@ class Foo(metaclass=metacls):
 
 
 Foo()
+
+

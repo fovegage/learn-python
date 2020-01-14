@@ -11,6 +11,7 @@ class Person():
         self.name = name
         self.age = 18
 
+
 class Student(Person):
     def __init__(self, name):
         # self.skill = skill
@@ -18,6 +19,7 @@ class Student(Person):
 
     def print(self):
         print(self.name + " " + str(self.age))
+
 
 p = Student('Gage')
 p.print()
