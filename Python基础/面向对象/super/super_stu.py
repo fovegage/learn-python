@@ -6,6 +6,8 @@
 # @Software: PyCharm
 
 # 和Java一样  子类实列化  父类也实例化   反之不可以
+# 继承父类的参数使用super
+# 这里应该和重载和重写区分
 class Person():
     def __init__(self, name):
         self.name = name

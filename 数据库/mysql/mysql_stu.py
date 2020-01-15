@@ -10,7 +10,7 @@ import pymysql
 
 
 def query(sql):
-    db = pymysql.connect("localhost", "root", "416798", "hahaha")
+    db = pymysql.connect("localhost", "root", "416798", "test")
     cursor = db.cursor()
     sql = sql
     try:
@@ -21,7 +21,7 @@ def query(sql):
 
     db.close()
 
-print(query('select * from good'))
+print(query('select * from user'))
 
 
 
