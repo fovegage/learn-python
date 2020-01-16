@@ -1,1 +1,1 @@
-### ORM 实现主要刨析 Django orm
+### ORM 实现，该模块同步至simplepy

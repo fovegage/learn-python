@@ -40,3 +40,4 @@ b = B()
 print(b.age)
 b.name = 'Gage'
 print(b.__dict__)
+print(dir(b))
