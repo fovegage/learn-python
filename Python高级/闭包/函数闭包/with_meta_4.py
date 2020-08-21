@@ -6,8 +6,13 @@ class Upper(type):
         return type(classname, baseclass, attrs_)
 
 
-class Foo(metaclass=Upper):
+class Parent:
+    def __init__(self):
+        self.name = 1
+
+
+class Foo(Parent, metaclass=Upper):
     bar = 1
 
 
-Foo()
+print(Foo.__dict__)

@@ -12,6 +12,7 @@ class SortList():
         self._item = initial if initial is not None else []
 
     def __getitem__(self, index):
+        print('1')
         return self._item[index]
 
     def __setitem__(self, key, value):
@@ -38,8 +39,8 @@ class SortList():
 s = SortList([1, 5, 6])
 print(s[2])
 print(s.add(99))
-print(list(s))
-print(len(s))
+# print(list(s))
+# print(len(s))
 
 
 

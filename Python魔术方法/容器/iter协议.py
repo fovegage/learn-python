@@ -46,5 +46,5 @@ class IterDemo:
             raise StopIteration
 
 it = IterDemo()
-print(list(it))
-print(list(it))
+# print(list(it))
+# print(list(it))

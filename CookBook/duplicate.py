@@ -20,3 +20,7 @@ def dupli(items, key=None):
 
 items = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3}, {'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
 print(list(dupli(items, key=lambda x: (x['x'], x['y']))))
+
+
+sorted(items, key=lambda x: (x['x'], x['y']))
+print(items)

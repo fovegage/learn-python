@@ -11,7 +11,8 @@ class Link:
 
     def __getattr__(self, item):
         if item == 'get' or item == 'post':
-            print(self.url)
+            pass
+            # print(self.url)
         return Link('{}.{}'.format(self.url, item))
 
 

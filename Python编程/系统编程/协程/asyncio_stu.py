@@ -7,6 +7,7 @@
 
 import asyncio
 
+
 @asyncio.coroutine
 def hello():
     print('hello world')
@@ -14,7 +15,6 @@ def hello():
     print('hello again')
 
 
-loop = asyncio.get_event_loop()   # 获取时间循环
+loop = asyncio.get_event_loop()  # 获取时间循环
 loop.run_until_complete(hello())  # 等待全部完成
 loop.close()
-

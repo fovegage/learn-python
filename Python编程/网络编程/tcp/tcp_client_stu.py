@@ -15,7 +15,7 @@ tcpsocket.connect(('127.0.0.1', 8888))
 
 # 输入
 tcpsocket.send(input('请输入').encode())
-
+tcpsocket.sendmsg()
 # 接受
 data = tcpsocket.recv(1024)
 print(data)

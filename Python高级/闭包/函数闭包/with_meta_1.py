@@ -71,7 +71,8 @@ class Bar:
 
 # with_metaclass1(test_meta_base) 返回的是一个类
 # 使用 Foo 继承
-class Foo(with_metaclass1(test_meta_base)):
+# class Foo(with_metaclass1(test_meta_base)):
+class Foo(metaclass=test_meta_base):
     bar = '1'
     """
     使用 with_metaclass 关联 Foo 和 base

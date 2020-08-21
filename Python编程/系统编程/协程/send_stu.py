@@ -12,6 +12,7 @@ def gen():
         print(a)
         i += 1
 
+
 # for i in gen():
 #     print(i)
 
