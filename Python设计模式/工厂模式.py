@@ -33,6 +33,7 @@ class AoDi():
     def move(self):
         print('移动')
 
+
 # 定义一个工厂
 class CarFactory():
 
@@ -43,6 +44,6 @@ class CarFactory():
 
         return self.car
 
+
 aodi = AoDiCarStore()
 aodi.order('AoDi')
-
