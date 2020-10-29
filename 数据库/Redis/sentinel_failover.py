@@ -3,6 +3,10 @@ import time
 from functools import wraps
 import logging
 
+"""
+1、应该注意该问题的出现：https://blog.csdn.net/u011089760/article/details/89950466
+2、Redis主节点挂掉的期间，Redis客户端也应该做相应的连接池优化判断
+"""
 logging.basicConfig(format='%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s',
                     level=logging.DEBUG)
 
