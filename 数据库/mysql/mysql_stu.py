@@ -5,27 +5,25 @@
 # @File    : mysql_stu.py
 # @Software: PyCharm
 import pymysql
-
-
-
+import configparser
 
 def query(sql):
-    db = pymysql.connect("localhost", "root", "416798", "test")
+    """
+    大批量插入，应该使用连接池
+    注意MySQL maxclients 最大为 max_connections=1000;
+    """
+    db = pymysql.connect("localhost", "root", "416798Gao!", "test")
+    print(id(db))
     cursor = db.cursor()
-    sql = sql
     try:
         cursor.execute(sql)
         return cursor.fetchall()
-    except:
-        print("Error: unable to fetch data")
+    except Exception as e:
+        print(f"Error: unable to fetch data, {e}")
 
     db.close()
 
-print(query('select * from user'))
 
-
-
-class Query():
-    def __init__(self, sql, host, username, password, database):
-        self.sql
-
+if __name__ == '__main__':
+    for item in range(100):
+        print(query('select * from student;'))
