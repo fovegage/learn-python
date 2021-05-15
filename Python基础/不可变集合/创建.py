@@ -9,3 +9,5 @@ a = frozenset(range(10))
 
 # 返回不同
 print(a.difference([1, 2]))
+
+print("开始上课")
