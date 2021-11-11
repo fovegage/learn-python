@@ -2,7 +2,7 @@
 暴露一个方法  接入不同的能力
 # https://refactoringguru.cn/design-patterns/strategy/python/example
 """
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class Context:

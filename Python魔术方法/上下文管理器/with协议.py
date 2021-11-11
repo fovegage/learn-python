@@ -6,7 +6,7 @@
 # @Software: PyCharm
 
 # 自己实现的上下文管理器
-class Close():
+class Close:
     def __init__(self, obj):
         self.obj = obj
 
@@ -20,11 +20,13 @@ class Close():
             print(exc_type)
 
 
+"""
+as 操作的是 __enter__ 返回的对象  运行完自动 __exit__
+"""
 # 这是我们自定义的  上下文管理器    它自带close() 功能
 with Close(int(5)) as i:
     i += 1
     print(i)
-
 
 # 嵌套with
 
@@ -49,15 +51,12 @@ class connect():
         self.con.pop().close
 
 
-
-
 with connect(("www.python.org", 80)) as s:
     s.send(b'GET /index.html HTTP/1.0\r\n')
     s.send(b'Host: www.python.org\r\n')
     s.send(b'\r\n')
     resp = b''.join(iter(partial(s.recv, 8192), b''))  # b'' 等待其出现
     print(resp)
-
 
 # partial实现原理如下
 from functools import partial

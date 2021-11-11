@@ -2,7 +2,7 @@
 # @Time    : 2019/1/4 15:22
 # @Author  : fovegage
 # @Email   : fovegage@gmail.com
-# @File    : 工厂模式（一）.py
+# @File    : 通俗工厂.py
 # @Software: PyCharm
 
 
@@ -48,6 +48,7 @@ class CarFactory():
 if __name__ == '__main__':
     """
     简单工厂模式 明确   车 4s点 工厂的概念
+    4S 是一个桥梁  既有一个中间商  去出售产品
     """
     aodi = AoDiCarStore()
     aodi.order('AoDi')

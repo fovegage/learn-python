@@ -14,13 +14,27 @@ class SinglePar:
         print(f"{cls.__instance} ---> instance")
         return cls.__instance
 
-    def __init__(self, x):
+    def __init__(self, x=None):
         print(f"{self} --- > init")
         self.x = x
 
+    @staticmethod
+    def test_static():
+        print(1)
 
-s1 = SinglePar(1)
-s2 = SinglePar(2)
+    @classmethod
+    def test_class(cls):
+        print(cls)
 
-print(s1)
-print(s2)
+
+if __name__ == '__main__':
+    """
+    __init__ 为构造方法  无需返回值
+    __new__  类函数  该函数将初始化  __init__ 中传入的参数  注意只在类实例化的时候 在魔术方法才被调用  负责类的初始化
+    """
+    SinglePar.test_class()
+    # s1 = SinglePar(1)
+    # s2 = SinglePar(2)
+    #
+    # print(s1)
+    # print(s2)

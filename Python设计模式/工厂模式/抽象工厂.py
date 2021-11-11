@@ -72,6 +72,9 @@ class ConcreteProductB1(ProductB):
 
 
 class ConcreteProductB2(ProductB):
+    """
+    真正工人操作
+    """
     def operation(self):
         return 'logic operation from productB2'
 
@@ -87,6 +90,8 @@ if __name__ == '__main__':
     """
     client
     用途：自定义插件
+    
+    对顶层 类 进行进一步提取  形成抽象基类方法
     """
     productA = ConcreteAbstractFactoryA().do_product_a()
     productB = ConcreteAbstractFactoryB().do_product_b()
