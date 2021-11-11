@@ -45,5 +45,9 @@ class CarFactory():
         return self.car
 
 
-aodi = AoDiCarStore()
-aodi.order('AoDi')
+if __name__ == '__main__':
+    """
+    简单工厂模式 明确   车 4s点 工厂的概念
+    """
+    aodi = AoDiCarStore()
+    aodi.order('AoDi')
