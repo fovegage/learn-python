@@ -21,13 +21,12 @@ print(id(c), id(d))
 str1 = 'hello'
 str2 = 'hello'
 print(id(str1), id(str2))
-del(str1)
-del(str2)
+del str1
+del str2
 
 # 删除后引用计数变为1   id 变化
 str3 = 'hello'
 print(id(str3))
-
 
 # 加入空格 intern  id 不一致
 str4 = 'hello world'
