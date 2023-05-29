@@ -5,18 +5,19 @@
 # @File    : pool_stu.py
 # @Software: PyCharm
 
-from multiprocessing import Pool
-import time
-import random
 import os
+import random
+import time
+from multiprocessing import Pool
 
 
 def work(msg):
     start = time.time()
     print("work{}开始执行,id为{}".format(msg, os.getpid()))
-    time.sleep(random.random()*2)
+    time.sleep(random.random() * 2)
     stop = time.time()
-    print("work{}耗时{}.".format(msg, stop-start))
+    print("work{}耗时{}.".format(msg, stop - start))
+
 
 p = Pool()
 for i in range(10):
@@ -24,7 +25,6 @@ for i in range(10):
     p.apply_async(work, args=(i,))
     # 堵塞进行
     # p.apply(work, args=(i,))
-
 
 print("开始")
 p.close()

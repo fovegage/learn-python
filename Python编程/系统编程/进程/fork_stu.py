@@ -8,7 +8,6 @@
 import os
 import time
 
-
 # 注意，fork函数，只在Unix/Linux/Mac上运行，windows不可以
 
 pid = os.fork()
@@ -21,7 +20,7 @@ if pid == 0:
 else:
     print('哈哈2')
 
-print("*"*50)
+print("*" * 50)
 
 num = 0
 
@@ -30,9 +29,9 @@ pid = os.fork()
 # fork()函数是直接复制的父进程的所有数据，因此数据互不影响
 
 if pid == 0:
-    num+=1
-    print('哈哈1---num=%d'%num)
+    num += 1
+    print('哈哈1---num=%d' % num)
 else:
     time.sleep(1)
-    num+=1
-    print('哈哈2---num=%d'%num)
+    num += 1
+    print('哈哈2---num=%d' % num)

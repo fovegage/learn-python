@@ -5,9 +5,9 @@
 # @File    : process_stu.py
 # @Software: PyCharm
 
-from multiprocessing import Process
-import time
 import os
+import time
+from multiprocessing import Process
 
 
 class Process_class(Process):
@@ -20,8 +20,7 @@ class Process_class(Process):
         start = time.time()
         time.sleep(self.push)
         stop = time.time()
-        print("子进程结束,耗时{}s.".format(stop-start))
-
+        print("子进程结束,耗时{}s.".format(stop - start))
 
 
 if __name__ == '__main__':
@@ -40,6 +39,3 @@ if __name__ == '__main__':
 子进程结束,耗时2.000720500946045s.
 当前进程20796执行结束.
 """
-
-
-

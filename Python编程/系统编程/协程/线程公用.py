@@ -7,11 +7,14 @@
 
 import asyncio
 import threading
+
+
 @asyncio.coroutine
 def hi():
     print(threading.current_thread())
     yield from asyncio.sleep(1)
     print(threading.current_thread())
+
 
 loop = asyncio.get_event_loop()
 tasks = [hi(), hi()]

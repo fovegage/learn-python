@@ -24,6 +24,7 @@ class My_thread_2(threading.Thread):
                 print("task2")
                 l3.release()
 
+
 class My_thread_3(threading.Thread):
     def run(self):
         while True:

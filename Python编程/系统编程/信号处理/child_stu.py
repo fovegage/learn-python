@@ -12,15 +12,18 @@
 import signal
 from threading import Thread
 
+
 def child():
     signal.signal(signal.SIGUSR1, signal.SIG_IGN)
     print('child thread')
+
 
 def main():
     thread = Thread(target=child)
     thread.start()
     thread.join()
     print('done')
+
 
 if __name__ == '__main__':
     main()

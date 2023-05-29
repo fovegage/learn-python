@@ -9,6 +9,8 @@ import threading
 
 # 可以加锁  也可以延时
 num = 0
+
+
 class My_Thread_1(threading.Thread):
     def run(self):
         global num
@@ -18,6 +20,7 @@ class My_Thread_1(threading.Thread):
                 num += 1
                 mutex.release()
         print("线程1：{}".format(num))
+
 
 class My_thread_2(threading.Thread):
     def run(self):

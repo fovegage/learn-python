@@ -5,12 +5,14 @@
 # @File    : multiprocess_stu.py
 # @Software: PyCharm
 
-from multiprocessing import Process
 import os
 import time
+from multiprocessing import Process
+
 
 def dance(name):
     print("子进程{}, id为{}.".format(name, os.getpid()))
+
 
 if __name__ == '__main__':
     print('当前进程为{}.'.format(os.getpid()))
@@ -30,17 +32,19 @@ if __name__ == '__main__':
 子进程执行结束
 """
 
+
 # 主进程的时间   包含子进程运行的时间
 # 子进程要执行的代码
 def run_proc(name, age, **kwargs):
     for i in range(10):
-        print('子进程运行中，name= %s,age=%d ,pid=%d...  《%s》' % (name, age,os.getpid(), i))
+        print('子进程运行中，name= %s,age=%d ,pid=%d...  《%s》' % (name, age, os.getpid(), i))
         print(kwargs)
         time.sleep(0.5)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     print('父进程 %d.' % os.getpid())
-    p = Process(target=run_proc, name="modi_name",args=('test',18), kwargs={"m":20})
+    p = Process(target=run_proc, name="modi_name", args=('test', 18), kwargs={"m": 20})
     print('子进程将要执行')
     p.start()
     print(p.name)
@@ -59,4 +63,3 @@ if __name__=='__main__':
 {'m': 20}
 子进程已结束
 """
-

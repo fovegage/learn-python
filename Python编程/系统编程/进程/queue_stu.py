@@ -7,11 +7,13 @@
 
 from multiprocessing import Queue, Process
 
+
 def write(q):
     info = ["A", "B", "C"]
     for i in info:
         print("发送{}.".format(i))
         q.put(i)
+
 
 def read(q):
     while True:

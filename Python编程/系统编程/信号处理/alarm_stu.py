@@ -8,8 +8,8 @@
 # !/usr/bin/env python3
 # coding=utf-8
 
-import time
 import signal
+import time
 
 
 def handle_SIGALRM(signum, frame):

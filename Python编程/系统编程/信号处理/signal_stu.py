@@ -4,10 +4,6 @@
 # @Email   : fovegage@gmail.com
 # @File    : signal_stu.py
 # @Software: PyCharm
-import signal
-import traceback
-import os
-import time
 
 # USR1 用户自定义信号  windows不可使用
 # 仅可以使用下面的几个信号，在windows
@@ -18,9 +14,10 @@ import time
 # SIGSEGV
 # SIGTERM
 import os
-import time
 import signal
+import time
 import traceback
+
 
 # 这两个参数Python解释器会自动传入，因此我们不必显示传入
 def handle_SIGUSR1(signum, frame):

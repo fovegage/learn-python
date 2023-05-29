@@ -17,6 +17,7 @@ def custumer():
         print('custer {}'.format(n))
         r = 'done'
 
+
 def produce(c):
     c.send(None)  # 启动
     n = 0
@@ -26,6 +27,7 @@ def produce(c):
         r = c.send(n)
         print('custer return {}'.format(r))
     c.close()
+
 
 c = custumer()
 produce(c)

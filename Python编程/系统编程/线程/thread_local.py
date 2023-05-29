@@ -7,6 +7,7 @@
 
 import threading
 
+
 # 线程不共享局部变量  只共享全局变量
 class My_thread(threading.Thread):
     def __init__(self, num):
@@ -17,9 +18,9 @@ class My_thread(threading.Thread):
         self.num += 1
         print(self.num)
 
+
 if __name__ == '__main__':
     t1 = My_thread(1)
     t2 = My_thread(3)
     t1.start()
     t2.start()
-
